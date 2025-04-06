@@ -95,7 +95,6 @@ section {
 
 section div {
     scroll-snap-align: start;
-    background-image: url("../assets/img/imgTatto.png");
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -111,6 +110,24 @@ section div {
     transition:  linear 1s;
 }
 
+section div:nth-child(1){
+    background-image: url("../assets/img/img1.png");
+}
+section div:nth-child(2){
+    background-image: url("../assets/img/img2.jpeg");
+}
+section div:nth-child(3){
+    background-image: url("../assets/img/img3.jpeg");
+}
+section div:nth-child(4){
+    background-image: url("../assets/img/img4.jpeg");
+}
+section div:nth-child(5){
+    background-image: url("../assets/img/img5.jpeg");
+}
+section div:nth-child(6){
+    background-image: url("../assets/img/img6.jpeg");
+}
 .aparecer {
     opacity: 1;
     filter: blur(0);
