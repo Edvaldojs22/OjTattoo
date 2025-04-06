@@ -1,13 +1,19 @@
-const observar = new IntersectionObserver((eventos) => {
-   eventos.forEach((event) => {
-    if (event.isIntersecting) {
-        event.target.classList.add('aparecer')
-    } else{
-        event.target.classList.remove('aparecer')
-    }
-   })
-});
-
 const galeria = document.querySelectorAll('.imgDiv');
 
-galeria.forEach((img) => {observar.observe(img)})
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const texto = entry.target.querySelector('.textImg');
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('aparecer');
+            texto.classList.add('animacao');
+        } else {
+            entry.target.classList.remove('aparecer');
+            texto.classList.remove('animacao');
+        }
+    });
+});
+
+galeria.forEach((img) => {
+    observer.observe(img);
+});
