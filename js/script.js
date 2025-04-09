@@ -21,17 +21,32 @@ galeria.forEach((img) => {
 
 const menu = document.querySelector('.menu');
 const painelMenu = document.querySelector('.painelMenu');
+const linhas = document.querySelectorAll('.linhaUm, .linhaDois');
 
 
 let teste = false;
 menu.addEventListener('click', () => {
+    linhas.forEach((l) => {
+        l.classList.toggle('ativo')
+    })
+
     if (teste) {
         painelMenu.classList.remove('painelMenuShow')
         teste = false
-        
+        linhas.forEach((l) => {
+            l.style.background = "white"
+        })
+
+
     } else {
         painelMenu.classList.add('painelMenuShow')
         teste = true
+        linhas.forEach((l) => {
+            l.style.background = "black"
+        })
+
+
     }
+
 
 })

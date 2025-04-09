@@ -53,37 +53,77 @@ header {
     right: 0;
     top: 0;
     z-index: 1;
+    transition: 0.2s linear;
 }
 
 .painelMenuShow{
     height: 100%;
-    transition: 0.2s linear;
+    
 }
 
 .menu {
-    width: 40px;
+    width: 50px;
     height: 50px;
     position: absolute;
     right: 20px;
     top: 20px;
 }
 
-.menu::after,.menu::before{
+.linhaUm, .linhaDois{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     content: "";
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 3px;
 }
 
-.menu::before {
+
+.linhaUm.ativo{
+    animation: girarUm linear 0.3s forwards;
+}
+
+.linhaDois.ativo{
+    animation: girarDois linear 0.3s forwards;
+}
+
+.linhaUm{
+    top: 70%;
+   
+   
+}
+
+.linhaDois{
     top: 30%;
+    
 }
 
-.menu::after {
-    bottom: 30%;
+@keyframes girarUm {
+    from{
+        top:70%;
+        transform: rotate(0);
+    }
+
+    to{
+        top:50%;
+        transform: rotate(50deg);
+    }
 }
+
+@keyframes girarDois {
+    from{
+        top:30%;
+        transform: rotate(0);
+    }
+
+    to{
+        top:50%;
+        transform: rotate(-50deg);
+    }
+}
+
+
+
 
 h1 {
     font-size: 20px;
