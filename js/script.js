@@ -17,3 +17,21 @@ const observer = new IntersectionObserver((entries) => {
 galeria.forEach((img) => {
     observer.observe(img);
 });
+
+
+const menu = document.querySelector('.menu');
+const painelMenu = document.querySelector('.painelMenu');
+
+
+let teste = false;
+menu.addEventListener('click', () => {
+    if (teste) {
+        painelMenu.classList.remove('painelMenuShow')
+        teste = false
+        
+    } else {
+        painelMenu.classList.add('painelMenuShow')
+        teste = true
+    }
+
+})
