@@ -141,6 +141,12 @@ header {
     
 }
 
+.painelRodape a{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
 .painelRodape img{
     width: 40px;
     margin-right: 8px;
